@@ -1,0 +1,137 @@
+* {
+    font-family: 'Stint Ultra Condensed', cursive;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header {
+    min-height: 60px;
+    background: black;
+    position: sticky;
+    top: 0%;
+    left: 0%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    font-size: xx-large;
+}
+
+a:hover {
+    color: gold;
+}
+
+#search_box {
+    font-size: x-large;
+}
+
+.burger {
+    display: none;
+}
+
+main {
+    min-height: 80vh;
+    background-image: url("../images/background-home4.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.preview-box {
+    min-height: 160px;
+    transition: 500ms;
+}
+
+.preview-box:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.preview-box img {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.box {
+    background: white;
+}
+
+.box button{
+    font-size: large;
+    background: black;
+    color:white;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+
+.logo,
+.box span {
+    cursor: pointer;
+}
+
+.box span:hover {
+    color: gold;
+}
+
+footer {
+    min-height: 50px;
+    background: black;
+    color: white;
+}
+
+
+@media (max-width:990px) {
+    nav a {
+        font-size: x-large;
+    }
+}
+
+@media (max-width:768px) {
+    .burger {
+        display: block;
+        font-size: 2em;
+        color: white;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 93px;
+        right: 0;
+        /* background: white; */
+        width: 50%;
+        z-index: 1;
+        background: rgba(243, 244, 232, 0.902);
+    }
+
+    header nav a {
+        display: block;
+        padding: 16px;
+        text-align: center;
+        color: black;
+    }
+
+    header nav a::after {
+        content: '';
+        width: 0%;
+        background: black;
+        height: 2px;
+        display: block;
+        margin: 0 auto;
+        transition: 1000ms;
+    }
+    
+    header nav a:hover:after {
+        width: 100%;
+    }
+
+}
